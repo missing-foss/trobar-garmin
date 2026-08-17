@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2026 missing-foss
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<resources>
+  <drawables>
+    <bitmap id="LauncherIcon" filename="drawables/launcher_icon.png"/>
+  </drawables>
+</resources>

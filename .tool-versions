@@ -1,0 +1,7 @@
+# Toolchain versions for this project. One source of truth: CI reads this file,
+# and a local `mise install` reproduces exactly what CI resolves.
+#
+# Pinned rather than tracking a channel: two builds a month apart otherwise use
+# different toolchains and nothing reports it, which matters most for a release
+# that has to be reproducible after the fact.
+java temurin-17.0.20+8

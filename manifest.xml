@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2026 missing-foss
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="3">
+  <iq:application entry="TrobarApp"
+      id="23d14a01a1de4e348cd7cb553693df4b"
+      launcherIcon="@Drawables.LauncherIcon"
+      minSdkVersion="3.1.0"
+      name="@Strings.AppName"
+      type="audio-content-provider-app"
+      version="0.3.0">
+    <iq:products>
+      <iq:product id="fenix5plus"/>
+    </iq:products>
+    <iq:permissions>
+      <iq:uses-permission id="Communications"/>
+      <iq:uses-permission id="PersistedContent"/>
+    </iq:permissions>
+    <iq:languages>
+      <iq:language>eng</iq:language>
+      <iq:language>fre</iq:language>
+    </iq:languages>
+  </iq:application>
+</iq:manifest>

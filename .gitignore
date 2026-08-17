@@ -1,0 +1,12 @@
+bin/
+*.prg
+*.der
+*.pem
+
+# CI downloads these binaries into the tree; keep them out of git
+# and out of reuse lint (mirrors trobar-android/.gitignore).
+/gitleaks
+/connect-iq-sdk-manager
+
+# Optional per-checkout additions to the leak scan's pattern list
+dev/forbidden-terms.local.txt

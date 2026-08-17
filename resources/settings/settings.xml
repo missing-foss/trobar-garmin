@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2026 missing-foss
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<!--
+Exposes properties.xml's serverUrl/enrollCode as user-editable settings via
+Garmin Connect Mobile — typed on the phone's normal keyboard, then synced
+to the watch automatically. Avoids building any on-watch text-entry UI.
+-->
+<settings>
+  <!-- type="url" rather than alphaNumeric: it gives the phone a URL
+       keyboard and lets Garmin Connect Mobile do the obvious checking
+       before the value ever reaches the watch. That's a first line of
+       defence, not the fix — nothing here is guaranteed across GCM
+       versions, so TrobarApi.normalizeServerUrl still treats whatever
+       arrives as untrusted text (trobar-garmin#43). -->
+  <setting propertyKey="@Properties.serverUrl" title="@Strings.settingServerUrlTitle">
+    <settingConfig type="url"/>
+  </setting>
+  <setting propertyKey="@Properties.enrollCode" title="@Strings.settingEnrollCodeTitle">
+    <settingConfig type="alphaNumeric"/>
+  </setting>
+</settings>

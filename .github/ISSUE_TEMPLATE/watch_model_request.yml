@@ -1,0 +1,81 @@
+# SPDX-FileCopyrightText: 2026 missing-foss
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+name: Request watch model support
+description: Ask for a Garmin watch model that isn't supported yet
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This app only supports the fēnix 5 Plus today. Adding a device id
+        to the manifest is easy — CI compiles for any Connect IQ device in
+        minutes. The hard part is **verifying** it actually works, since
+        the maintainer only owns a fēnix 5 Plus. Whether you can sideload a
+        test build and report back is what actually moves a model from
+        "compiles" to "supported" — see the note below before submitting.
+  - type: input
+    id: model
+    attributes:
+      label: Exact model + variant
+      description: >
+        e.g. "fēnix 7X Sapphire Solar", "Venu 3S", "Forerunner 965" —
+        variant matters (size/edition).
+      placeholder: fēnix 7X Sapphire Solar
+    validations:
+      required: true
+  - type: dropdown
+    id: music_capable
+    attributes:
+      label: Is it Music-capable?
+      description: >
+        Does the watch have onboard music storage / a Music widget? Some
+        models ship in Music and non-Music editions — only the Music ones
+        can run this app at all. Connect IQ's Audio Content Provider
+        category (which this app uses) only runs on watches with onboard
+        music storage.
+      options:
+        - "Yes — it has onboard music storage"
+        - "No"
+        - "Not sure"
+    validations:
+      required: true
+  - type: dropdown
+    id: can_test
+    attributes:
+      label: Can you sideload a test build and report back?
+      description: >
+        The real unblocker. A model can be built blind, but shouldn't be
+        called "supported" until someone with that watch has sideloaded a
+        build and confirmed pair → sync → playback actually works on it.
+      options:
+        - "Yes — I have this watch and can test a sideloaded build"
+        - "No — request only"
+    validations:
+      required: true
+  - type: input
+    id: device_id
+    attributes:
+      label: Connect IQ device id (optional)
+      description: >
+        The `id` from developer.garmin.com/connect-iq/device-reference
+        (e.g. fenix7x, venu3) — nice to have; the maintainer can look it up
+        if you don't know it.
+      placeholder: fenix7x
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware version (optional)
+      description: Behaviour/API level can vary across firmware.
+  - type: input
+    id: screen
+    attributes:
+      label: Screen (optional)
+      description: >
+        Round vs rectangular, resolution, colour depth if known. Not
+        cosmetic — the status screens were laid out for the fēnix 5 Plus's
+        round 240×240 64-colour display, and a different shape/size may
+        clip text, needing a per-device layout tweak that can only be
+        confirmed on the real hardware.
+      placeholder: e.g. round, 260x260, 64-colour

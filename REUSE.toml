@@ -1,0 +1,33 @@
+# REUSE (https://reuse.software) licensing for files that can't carry an inline
+# SPDX header — binaries and files without a comment syntax. First-party
+# source files carry their own header instead.
+version = 1
+
+# --- Launcher icon (Trobar bard/lute mark, #19) -----------------------------
+[[annotations]]
+path = "resources/drawables/launcher_icon.png"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 missing-foss"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+# --- .gitignore (no header) -------------------------------------------------
+[[annotations]]
+path = ".gitignore"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 missing-foss"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+# --- dev/forbidden-terms.txt carries its own comment header explaining the
+# format; an SPDX block on top would outweigh a body of two regexes ---------
+[[annotations]]
+path = "dev/forbidden-terms.txt"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 missing-foss"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+# --- VERSION (no comment syntax) --------------------------------------------
+[[annotations]]
+path = "VERSION"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 missing-foss"
+SPDX-License-Identifier = "GPL-3.0-or-later"

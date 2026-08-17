@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2026 missing-foss
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<resources>
+  <strings>
+    <!-- A proper noun, and Occitan at that — the same in both languages.
+         Present anyway: without it monkeyc warns on every build that
+         AppName is undefined for 'fre', and a warning nobody can act on
+         is one that stops being read. -->
+    <string id="AppName">Trobar</string>
+    <string id="settingServerUrlTitle">URL du serveur</string>
+    <string id="settingEnrollCodeTitle">Code de jumelage</string>
+    <string id="statusNotConfigured">Entrez le serveur et le code dans l'appli Garmin Connect</string>
+    <string id="statusPairingFailedFmt">Échec du jumelage :</string>
+    <string id="statusPairedFmt">Jumelé :</string>
+    <string id="menuForgetPairing">Oublier le jumelage</string>
+    <string id="hintPressSelectToPlay">Appuyez sur Sélection pour lire</string>
+    <string id="hintCheckWebUi">Statut de synchro : voir le web</string>
+    <string id="errInvalidCode">Code invalide ou expiré</string>
+    <string id="errNetwork">Erreur réseau</string>
+    <string id="errNotConfigured">Non configuré</string>
+  </strings>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2026 missing-foss
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<resources>
+  <strings>
+    <string id="AppName">Trobar</string>
+    <string id="settingServerUrlTitle">Server URL</string>
+    <string id="settingEnrollCodeTitle">Pairing Code</string>
+    <string id="statusNotConfigured">Enter server + code in the Garmin Connect app</string>
+    <string id="statusPairingFailedFmt">Pairing failed:</string>
+    <string id="statusPairedFmt">Paired:</string>
+    <string id="menuForgetPairing">Forget pairing</string>
+    <string id="hintPressSelectToPlay">Press Select to play</string>
+    <string id="hintCheckWebUi">Sync status: see web UI</string>
+    <string id="errInvalidCode">Invalid or expired code</string>
+    <string id="errNetwork">Network error</string>
+    <string id="errNotConfigured">Not configured</string>
+  </strings>
+</resources>

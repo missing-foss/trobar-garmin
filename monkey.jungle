@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2026 missing-foss
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+project.manifest = manifest.xml
+
+# Explicit French resource path. The SDK's own defaults may already
+# discover resources-fre/ (Garmin's shipped default.jungle pre-wires
+# base.lang.* for a number of languages to their conventional
+# resources-<code> folders) but relying purely on manifest.xml's
+# <iq:language>fre</iq:language> plus that default compiles and lints
+# green either way, whether or not it actually works — there is no
+# build-time signal that distinguishes "found the French strings" from
+# "silently fell back to English" (trobar-garmin#13). Making the path
+# explicit costs nothing if the default already covered it, and is the
+# actual fix if it didn't.
+base.lang.fre = $(base.lang.fre);resources-fre
+
+# Unit tests (trobar-garmin#33). Adding test/ to the source path does NOT
+# put test code in the shipped app: monkeyc only compiles (:test)-annotated
+# code when -t/--unit-test is passed, and everything under test/ carries
+# that annotation. Verified rather than assumed — a build without -t
+# produces a .prg with none of the test symbols in it (CONTRIBUTING.md
+# records how to re-check). Running the tests needs the simulator, which
+# needs a GTK stack Ubuntu 24.04 no longer ships; dev/verify.sh skips them
+# when it isn't usable, and CONTRIBUTING.md has the container recipe.
+base.sourcePath = $(base.sourcePath);test
