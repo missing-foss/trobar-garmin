@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 missing-foss
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
 # Toolchain versions for this project. One source of truth: CI reads this file,
 # and a local `mise install` reproduces exactly what CI resolves.
 #
